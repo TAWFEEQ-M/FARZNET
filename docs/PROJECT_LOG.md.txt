@@ -1,0 +1,16 @@
+Date: 02-07-2026
+
+Version:
+FarzDNS v0.1
+
+Completed:
+- Built a basic DNS resolver
+- Learned Python dictionaries
+- Learned loops
+- Learned domain lookup
+
+Problems:
+None
+
+Next Goal:
+Convert FarzDNS into a network service

@@ -1,0 +1,87 @@
+# FARZNET Architecture
+
+Version: 0.1
+Author: Farz Usuf
+
+---------------------------------------
+
+MISSION
+
+Build an independent networking platform
+that starts with 10 users and can scale
+to thousands of users.
+
+---------------------------------------
+
+MODULES
+
+1. FarzDNS
+Purpose:
+Converts domain names into IP addresses.
+
+Status:
+In Development
+
+---------------------------------------
+
+2. FarzServer
+Purpose:
+Hosts websites and services.
+
+Status:
+Not Started
+
+---------------------------------------
+
+3. FarzBrowser
+Purpose:
+Allows users to browse FARZNET websites.
+
+Status:
+Not Started
+
+---------------------------------------
+
+4. FarzChat
+Purpose:
+Messaging system.
+
+Status:
+Not Started
+
+---------------------------------------
+
+5. FarzSearch
+Purpose:
+Search engine.
+
+Status:
+Not Started
+
+---------------------------------------
+
+6. FarzCloud
+Purpose:
+Cloud file storage.
+
+Status:
+Not Started
+
+---------------------------------------
+
+7. FarzProtocol
+Purpose:
+Custom communication protocol.
+
+Status:
+Research
+
+---------------------------------------
+
+8. FarzOS
+
+Purpose:
+Operating system designed for FARZNET.
+
+Status:
+Future
