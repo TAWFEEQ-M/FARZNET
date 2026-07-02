@@ -1,36 +1,36 @@
 import socket
 
-dns_database = {
-    "chat.farz": "192.168.1.2",
-    "server.farz": "192.168.1.3",
-    "camera.farz": "192.168.1.4",
-    "home.farz": "192.168.1.5"
-}
+from config import HOST, PORT, BUFFER_SIZE, VERSION
+from database import DNSDatabase
+from logger import Logger
 
-HOST = "127.0.0.1"
-PORT = 5353
+db = DNSDatabase()
+logger = Logger()
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind((HOST, PORT))
 server.listen()
 
-print("====================================")
-print("      FARZNET DNS SERVER v0.2")
-print("====================================")
+print("=" * 50)
+print(VERSION)
+print("=" * 50)
 print(f"Listening on {HOST}:{PORT}")
 
+logger.log("FarzDNS Server Started")
+
 while True:
+
     client, address = server.accept()
-    print(f"\nConnection from {address}")
 
-    domain = client.recv(1024).decode().lower()
+    logger.log(f"Client Connected : {address}")
 
-    print(f"Requested: {domain}")
+    domain = client.recv(BUFFER_SIZE).decode()
 
-    if domain in dns_database:
-        reply = dns_database[domain]
-    else:
-        reply = "NOT FOUND"
+    logger.log(f"Requested : {domain}")
+
+    reply = db.get_ip(domain)
+
+    logger.log(f"Reply : {reply}")
 
     client.send(reply.encode())
 
