@@ -1,0 +1,19 @@
+# FARZNET Software Requirements Specification
+
+1. Vision
+
+2. Objectives
+
+3. Scope
+
+4. System Architecture
+
+5. Modules
+
+6. Functional Requirements
+
+7. Non-Functional Requirements
+
+8. Security
+
+9. Future Expansion

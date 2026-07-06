@@ -1,17 +1,32 @@
 import socket
 
-HOST = "127.0.0.1"
-PORT = 5353
+from config import HOST, PORT, BUFFER_SIZE
+from protocol import FNP
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 client.connect((HOST, PORT))
 
 domain = input("Enter domain: ")
 
-client.send(domain.encode())
+request = FNP.build_request(
+    "DNS_QUERY",
+    domain
+)
 
-reply = client.recv(1024).decode()
+client.send(request.encode())
 
-print("Reply:", reply)
+response = client.recv(BUFFER_SIZE).decode()
+
+print("\nRAW RESPONSE")
+print("----------------")
+print(response)
+
+parsed = FNP.parse(response)
+
+print("\nPARSED RESPONSE")
+print("----------------")
+print(parsed)
+print("==============================")
 
 client.close()

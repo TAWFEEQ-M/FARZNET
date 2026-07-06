@@ -1,0 +1,50 @@
+# FARZNET Roadmap
+
+## Version 1.0 ✅
+
+- GitHub Repository
+- DNS Database
+- DNS Server
+- DNS Client
+- Logger
+- Configuration
+- JSON Storage
+
+---
+
+## Version 1.1
+
+- Multi Client Support
+- Better Error Handling
+- Automatic Reload
+- Admin Commands
+
+---
+
+## Version 2.0
+
+- Farz Browser
+
+---
+
+## Version 3.0
+
+- Farz Search
+
+---
+
+## Version 4.0
+
+- Farz Chat
+
+---
+
+## Version 5.0
+
+- Farz Cloud
+
+---
+
+## Version 6.0
+
+- FarzOS

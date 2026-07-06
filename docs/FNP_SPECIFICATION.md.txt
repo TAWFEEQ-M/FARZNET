@@ -1,0 +1,51 @@
+# Farz Network Protocol (FNP)
+
+Version: 1.0
+
+--------------------------------
+
+Message Format
+
+FNP/1.0
+
+TYPE:<REQUEST_TYPE>
+
+DATA:<VALUE>
+
+--------------------------------
+
+Request Types
+
+DNS_QUERY
+
+CHAT_MESSAGE
+
+LOGIN
+
+SEARCH
+
+FILE_UPLOAD
+
+FILE_DOWNLOAD
+
+--------------------------------
+
+Response Format
+
+FNP/1.0
+
+STATUS:OK
+
+DATA:<VALUE>
+
+--------------------------------
+
+Status Codes
+
+OK
+
+NOT_FOUND
+
+ERROR
+
+ACCESS_DENIED
