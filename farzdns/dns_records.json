@@ -1,12 +1,11 @@
 {
-    "chat.farz": "192.168.1.2",
-    "server.farz": "192.168.1.3",
-    "camera.farz": "192.168.1.4",
-    "home.farz": "192.168.1.5",
-    "music.farz": "192.168.1.6",
-    "college.farz": "192.168.1.7",
-    "printer.farz": "192.168.1.8",
-    "mobile.farz": "192.168.1.9",
-    "cloud.farz": "192.168.1.10",
-    "storage.farz": "192.168.1.11"
+    "home.farz": "http://192.168.1.6:8080/home",
+    "chat.farz": "http://192.168.1.6:8080/chat",
+    "store.farz": "http://192.168.1.6:8080/store",
+    "music.farz": "http://192.168.1.6:8080/music",
+    "mail.farz": "http://192.168.1.6:8080/mail",
+    "search.farz": "http://192.168.1.6:8080/search",
+    "about.farz": "http://192.168.1.6:8080/about",
+    "games.farz": "http://192.168.1.6:8080/games",
+    "projects.farz": "http://192.168.1.6:8080/projects"
 }

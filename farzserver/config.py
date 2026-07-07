@@ -1,6 +1,11 @@
-HOST = "127.0.0.1"
+HOST = "0.0.0.0"
 PORT = 8080
 
 BUFFER_SIZE = 4096
 
-WEBSITE_FOLDER = "websites"
+import os
+
+WEBSITE_FOLDER = os.path.join(
+    os.path.dirname(__file__),
+    "websites"
+)

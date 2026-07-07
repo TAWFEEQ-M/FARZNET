@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>FarzBrowser</title>
+
+<style>
+body {
+    margin:0;
+    font-family:Arial;
+}
+
+#bar {
+    height:50px;
+    background:#111;
+    padding:10px;
+}
+
+input {
+    width:80%;
+    height:30px;
+    font-size:18px;
+}
+
+button {
+    height:35px;
+    width:80px;
+}
+
+iframe {
+    width:100%;
+    height:calc(100vh - 70px);
+    border:none;
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="bar">
+<input id="address" placeholder="Enter Farz address...">
+<button onclick="go()">GO</button>
+</div>
+
+<iframe id="page"></iframe>
+
+
+<script>
+
+async function go(){
+
+    let address =
+    document.getElementById("address").value;
+
+    let url =
+    await window.pywebview.api.resolve_domain(address);
+
+
+    if(url!="NOT FOUND"){
+
+        document.getElementById("page").src=url;
+
+    }
+    else{
+
+        alert("Domain not found");
+
+    }
+
+}
+
+</script>
+
+
+</body>
+</html>
